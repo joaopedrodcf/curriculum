@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: white;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+#root,
+.grid-container {
+  height: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 60px 1fr 40px;
+  grid-template-areas: "header header header header header header " "main main main main main main" "footer footer footer footer footer footer";
+  grid-gap: 1px;
+}
+
+/*
+Increase the Font Size - https://cssnewbie.com/make-beautiful-hyperlinks-using-css/
+*/
+
+article a {
+  margin-left: 10px;
+  display: inline-block;
+  transition: 0.3s;
+  font-weight: bold;
+  text-decoration: none;
+  color: royalblue;
+}
+article a:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/*
+Header
+*/
+
+.header-site {
+  background-image: url("https://images.unsplash.com/photo-1516101922849-2bf0be616449?ixlib=rb-0.3.5&s=e4b81ba6ba6aaff25fc3e7caced7093d&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  grid-area: header;
+  justify-content: space-between;
+}
+
+.header-site h1 {
+  color: white;
+  margin: auto 10px;
+}
+
+/*
+Navbar
+*/
+
+nav {
+  /* This is useful for spanning on all the site */
+  /* 
+  background-color: #c5283d; 
+  */
+  margin: auto 10px;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0px 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li:hover {
+  border-bottom: 4px solid #ffffff;
+}
+/*
+Sidebar
+*/
+.aside-left {
+  grid-area: aside-left;
+}
+
+.aside-right {
+  grid-area: aside-right;
+}
+
+.aside-right ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  grid-area: main;
+  min-width: 0;
+  /* used to shrink */
+  /* 
+ background-color: #481d24;
+  */
+  margin: auto 0px;
+  display: flex;
+}
+
+main figure {
+  margin: auto 20px;
+}
+main figure img {
+  width: 80%;
+  height: auto;
+  border-radius: 2%;
+  box-shadow: 10px 10px 20px 1px gray;
+}
+
+main p {
+  font-size: 1em;
+}
+
+article {
+  border-left: 4px solid slategray;
+  padding-left: 20px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #255f85;
+  display: flex;
+}
+
+footer div {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+footer a {
+  margin-left: 20px;
+  display: inline-block;
+  transition: 0.3s;
+  font-weight: bold;
+  text-decoration: none;
+  color: powderblue;
+}
+footer a:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-rows: 100px 1fr 40px;
+  }
+
+  .header-site h1 {
+    font-size: 1.1em;
+  }
+}
