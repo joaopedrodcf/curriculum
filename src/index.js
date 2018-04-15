@@ -25,13 +25,13 @@ class App extends React.Component {
         </header>
 
         <main>
-          <figure>
-            <img src="\me.jpeg" />
-            <figcaption>Web developer</figcaption>
-          </figure>
           <section>
-            <h1>Me</h1>
+            <figure>
+              <img src="\me.jpeg" />
+              <figcaption>Web developer</figcaption>
+            </figure>
             <article>
+              <h1>Me</h1>
               <p>
                 Since I can remember, I've always loved computers and
                 technology, and that was the spark I needed to begin studying
