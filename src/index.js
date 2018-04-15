@@ -9,24 +9,25 @@ class App extends React.Component {
       <div className="grid-container">
         <header className="header-site">
           <div className="header-logo">
-            <h1>João Ferreira - Web developer</h1>
+            <h1>JF - Web Developer</h1>
           </div>
           <nav>
             <div className="nav-links">
-              <ul>
-                <li>
-                  <a href="">About me</a>
-                </li>
-                <li>
-                  <a href="">Skills</a>
-                </li>
-                <li>
-                  <a href="">Projects</a>
-                </li>
-                <li>
-                  <a href="">Contact me</a>
-                </li>
-              </ul>
+              <a href="">
+                <p>About me</p>
+              </a>
+
+              <a href="">
+                <p>Skills</p>
+              </a>
+
+              <a href="">
+                <p>Projects</p>
+              </a>
+
+              <a href="">
+                <p>Contact me</p>
+              </a>
             </div>
           </nav>
         </header>
@@ -34,7 +35,7 @@ class App extends React.Component {
         <main>
           <section className="section-about-me">
             <figure>
-              <img src="https://placehold.it/250x250" />
+              <img src="https://placehold.it/250x250" alt="about-me-img" />
               <figcaption>Web developer</figcaption>
             </figure>
             <article>

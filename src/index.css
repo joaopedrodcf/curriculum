@@ -88,25 +88,19 @@ NAVBAR
 
 .nav-links {
   margin: auto 10px;
-}
-
-.nav-links ul {
   padding: 0;
   list-style: none;
   display: flex;
   justify-content: center;
 }
 
-.nav-links ul li {
+.nav-links a {
   margin: 0px 10px;
-}
-
-.nav-links ul li a {
   text-decoration: none;
   color: white;
 }
 
-.nav-links ul li:hover {
+.nav-links a:hover {
   border-bottom: 4px solid #ffffff;
 }
 
