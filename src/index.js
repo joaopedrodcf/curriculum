@@ -9,7 +9,7 @@ class App extends React.Component {
       <div className="grid-container">
         <header className="header-site">
           <div className="header-logo">
-            <h1>JF - Web Developer</h1>
+            <img className="logo" src="my_first_logo.png" alt="about-me-img" />
           </div>
           <nav>
             <div className="nav-links">
