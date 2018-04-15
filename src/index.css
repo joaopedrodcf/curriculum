@@ -1,3 +1,9 @@
+/*
+=============================================================================================================================================
+GLOBALS
+=============================================================================================================================================
+*/
+
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +14,7 @@ body {
   background-color: white;
   height: 100%;
   font-family: "Open Sans", sans-serif;
+  text-align: justify;
 }
 
 #root,
@@ -17,9 +24,9 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 1fr 10fr 1fr;
   grid-template-rows: 60px 1fr 40px;
-  grid-template-areas: "header header header header header header " ". main main main main ." "footer footer footer footer footer footer";
+  grid-template-areas: "header header header" " . main  . " "footer footer footer";
   grid-gap: 1px;
 }
 
@@ -35,13 +42,16 @@ article a {
   text-decoration: none;
   color: royalblue;
 }
+
 article a:hover {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 
 /*
-Header
+=============================================================================================================================================
+HEADER
+=============================================================================================================================================
 */
 
 .header-site {
@@ -53,76 +63,82 @@ Header
   justify-content: space-between;
 }
 
-.header-site h1 {
+/*
+=============================================================================================================================================
+HEADER LOGO
+=============================================================================================================================================
+*/
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.header-logo h1 {
   color: white;
   margin: auto 10px;
+  font-size: 1.1em;
 }
 
 /*
-Navbar
+=============================================================================================================================================
+NAVBAR
+=============================================================================================================================================
 */
 
-nav {
-  /* This is useful for spanning on all the site */
-  /* 
-  background-color: #c5283d; 
-  */
+.nav-links {
   margin: auto 10px;
 }
 
-nav ul {
+.nav-links ul {
   padding: 0;
   list-style: none;
   display: flex;
   justify-content: center;
 }
 
-nav ul li {
+.nav-links ul li {
   margin: 0px 10px;
 }
 
-nav ul li a {
+.nav-links ul li a {
   text-decoration: none;
   color: white;
 }
 
-nav ul li:hover {
+.nav-links ul li:hover {
   border-bottom: 4px solid #ffffff;
 }
+
 /*
-Sidebar
+=============================================================================================================================================
+MAIN
+=============================================================================================================================================
 */
-.aside-left {
-  grid-area: aside-left;
-}
-
-.aside-right {
-  grid-area: aside-right;
-}
-
-.aside-right ul li a {
-  text-decoration: none;
-  color: white;
-}
 
 main {
   grid-area: main;
-  min-width: 0;
-  /* used to shrink */
-  /* 
- background-color: #481d24;
-  */
+  min-width: 0px;
   margin: auto 0px;
 }
 
+/*
+=============================================================================================================================================
+MAIN SECTION
+=============================================================================================================================================
+*/
+
 main section {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-
-  /* works like magic */
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: 200px 3fr;
+  grid-template-rows: auto fr1;
   grid-gap: 10px;
-  grid-template-areas: "figure article article article article article" "figure article article article article article" ". article article article article article";
+  grid-template-areas: "figure article" ". article ";
+}
+
+main section article {
+  border-left: 4px solid lightslategrey;
+  padding-left: 20px;
 }
 
 main section figure {
@@ -134,6 +150,16 @@ main section article {
   grid-area: article;
 }
 
+main section article h1 {
+  font-size: 2em;
+  grid-area: article;
+}
+
+main section article p {
+  font-size: 0.9em;
+  color: gray;
+}
+
 main section figure img {
   width: 150px;
   height: 100%;
@@ -141,14 +167,15 @@ main section figure img {
   box-shadow: 10px 10px 20px 1px gray;
 }
 
-main p {
-  font-size: 1em;
+main section figure figcaption {
+  color: darkblue;
 }
 
-article {
-  border-left: 4px solid slategray;
-  padding-left: 20px;
-}
+/*
+=============================================================================================================================================
+FOOTER
+=============================================================================================================================================
+*/
 
 footer {
   grid-area: footer;
@@ -169,20 +196,28 @@ footer a {
   text-decoration: none;
   color: powderblue;
 }
+
 footer a:hover {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 
+/*
+=============================================================================================================================================
+MEDIA QUERYS
+=============================================================================================================================================
+*/
+
 @media (max-width: 900px) {
   .grid-container {
-    grid-template-rows: 100px 1fr auto;
+    grid-template-rows: 120px 1fr auto;
   }
-
+  .header-site {
+    flex-flow: column;
+  }
   main section {
-    grid-template-areas: "figure figure figure figure figure figure" "article article article article article article" "article article article article article article";
+    grid-template-areas: "figure figure" "article article";
   }
-
   main section figure {
     justify-self: center;
   }

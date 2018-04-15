@@ -8,30 +8,37 @@ class App extends React.Component {
     return (
       <div className="grid-container">
         <header className="header-site">
-          <h1>João Ferreira - Web developer</h1>
+          <div className="header-logo">
+            <h1>João Ferreira - Web developer</h1>
+          </div>
           <nav>
-            <ul>
-              <li>
-                <a href="">About me</a>
-              </li>
-              <li>
-                <a href="">Projects</a>
-              </li>
-              <li>
-                <a href="">Contact me</a>
-              </li>
-            </ul>
+            <div className="nav-links">
+              <ul>
+                <li>
+                  <a href="">About me</a>
+                </li>
+                <li>
+                  <a href="">Skills</a>
+                </li>
+                <li>
+                  <a href="">Projects</a>
+                </li>
+                <li>
+                  <a href="">Contact me</a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </header>
 
         <main>
-          <section>
+          <section className="section-about-me">
             <figure>
-              <img src="\me.jpeg" />
+              <img src="https://placehold.it/250x250" />
               <figcaption>Web developer</figcaption>
             </figure>
             <article>
-              <h1>Me</h1>
+              <h1>About me</h1>
               <p>
                 Since I can remember, I've always loved computers and
                 technology, and that was the spark I needed to begin studying
@@ -81,6 +88,8 @@ class App extends React.Component {
               </p>
             </article>
           </section>
+
+          <section className="section-skills" />
         </main>
 
         <footer>
