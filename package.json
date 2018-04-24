@@ -2,7 +2,7 @@
   "name": "curriculum",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://joaopedrodcf.github.io/curriculum",
+  "homepage": "https://joaopedrodcf.github.io/curriculum",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "react": "^16.2.0",
