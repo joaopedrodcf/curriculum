@@ -19,8 +19,8 @@ html,
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
-  grid-template-rows: 60px 1fr 1fr 100px;
-  grid-template-areas: "header header header" " . section-about-me . " " . section-skills . " "footer footer footer";
+  grid-template-rows: 60px 1fr 1fr 1fr 100px;
+  grid-template-areas: "header header header" " . section-about-me . " " . section-skills . " " . section-contact-me . " "footer footer footer";
   grid-gap: 20px;
 }
 
@@ -210,6 +210,34 @@ section-skills
   color: yellowgreen !important;
   padding: 0px;
   margin: 0px;
+}
+
+/*
+=============================================================================================================================================
+CONTACT ME
+=============================================================================================================================================
+*/
+
+.section-contact-me {
+  grid-area: section-contact-me;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto fr1;
+  grid-gap: 10px;
+  grid-template-areas: ". form .";
+}
+.section-contact-me form {
+  grid-area: form;
+}
+.section-contact-me form div {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.5em;
+}
+
+.section-contact-me form div input,
+.section-contact-me form div textarea {
+  flex: 1;
 }
 
 /*
