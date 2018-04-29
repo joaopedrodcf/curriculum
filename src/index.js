@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Routes from './Routes';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes />
   </BrowserRouter>,
   document.getElementById('root'),

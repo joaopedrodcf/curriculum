@@ -9,16 +9,16 @@ const Header = () => (
     </div>
     <nav>
       <div className="nav-links">
-        <NavLink exact to="/curriculum">
+        <NavLink exact to="/">
           <p>About me</p>
         </NavLink>
-        <NavLink exact to="/curriculum/skills">
+        <NavLink exact to="/skills">
           <p>Skills</p>
         </NavLink>
-        <NavLink exact to="/curriculum/projects">
+        <NavLink exact to="/projects">
           <p>Projects</p>
         </NavLink>
-        <NavLink exact to="/curriculum/contactme">
+        <NavLink exact to="/contactme">
           <p>Contact me</p>
         </NavLink>
       </div>
