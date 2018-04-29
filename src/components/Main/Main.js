@@ -6,9 +6,9 @@ import ContactMe from './ContactMe';
 
 const Main = () => (
   <Switch>
-    <Route exact path="/" component={AboutMe} />
-    <Route exact path="/skills" component={Skills} />
-    <Route exact path="/contactme" component={ContactMe} />
+    <Route exact path="/curriculum" component={AboutMe} />
+    <Route exact path="/curriculum/skills" component={Skills} />
+    <Route exact path="/curriculum/contactme" component={ContactMe} />
   </Switch>
 );
 
