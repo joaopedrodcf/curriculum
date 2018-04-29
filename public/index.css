@@ -12,15 +12,15 @@ html,
   padding: 0px;
   background-color: white;
   height: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-align: justify;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
-  grid-template-rows: 60px 1fr 1fr 1fr 100px;
-  grid-template-areas: "header header header" " . section-about-me . " " . section-skills . " " . section-contact-me . " "footer footer footer";
+  grid-template-rows: 60px 1fr 100px;
+  grid-template-areas: 'header header header' ' . section . ' 'footer footer footer';
   grid-gap: 20px;
 }
 
@@ -123,12 +123,12 @@ MAIN SECTION
 */
 
 .section-about-me {
-  grid-area: section-about-me;
+  grid-area: section;
   display: grid;
   grid-template-columns: 200px 3fr;
   grid-template-rows: auto fr1;
   grid-gap: 10px;
-  grid-template-areas: "figure article" ". article ";
+  grid-template-areas: 'figure article' '. article ';
   margin-bottom: 50px;
 }
 
@@ -174,7 +174,7 @@ section-skills
 */
 
 .section-skills {
-  grid-area: section-skills;
+  grid-area: section;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -219,12 +219,12 @@ CONTACT ME
 */
 
 .section-contact-me {
-  grid-area: section-contact-me;
+  grid-area: section;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto fr1;
   grid-gap: 10px;
-  grid-template-areas: ". form .";
+  grid-template-areas: '. form .';
 }
 .section-contact-me form {
   grid-area: form;
@@ -296,7 +296,7 @@ MEDIA QUERYS
     flex-flow: column;
   }
   .section-about-me {
-    grid-template-areas: "figure figure" "article article";
+    grid-template-areas: 'figure figure' 'article article';
   }
   .section-about-me figure {
     justify-self: center;
