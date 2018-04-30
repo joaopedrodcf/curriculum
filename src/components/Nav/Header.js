@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-// https://coolors.co/ffc857-e9724c-c5283d-481d24-255f85
 const Header = () => (
   <header className="header-site">
     <div className="header-logo">
@@ -9,16 +8,16 @@ const Header = () => (
     </div>
     <nav>
       <div className="nav-links">
-        <NavLink exact to="/">
+        <NavLink activeClassName="nav-links-active" exact to="/">
           <p>About me</p>
         </NavLink>
-        <NavLink exact to="/skills">
+        <NavLink activeClassName="nav-links-active" exact to="/skills">
           <p>Skills</p>
         </NavLink>
-        <NavLink exact to="/projects">
+        <NavLink activeClassName="nav-links-active" exact to="/projects">
           <p>Projects</p>
         </NavLink>
-        <NavLink exact to="/contactme">
+        <NavLink activeClassName="nav-links-active" exact to="/contactme">
           <p>Contact me</p>
         </NavLink>
       </div>

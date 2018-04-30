@@ -20,7 +20,7 @@ html,
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
   grid-template-rows: 60px 1fr 100px;
-  grid-template-areas: 'header header header' ' . section . ' 'footer footer footer';
+  grid-template-areas: 'header header header' ' . main . ' 'footer footer footer';
   grid-gap: 20px;
 }
 
@@ -98,7 +98,8 @@ NAVBAR
   color: white;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links-active {
   border-bottom: 4px solid #ffffff;
 }
 
@@ -220,19 +221,16 @@ CONTACT ME
 
 .section-contact-me {
   grid-area: section;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto fr1;
-  grid-gap: 10px;
-  grid-template-areas: '. form .';
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
 }
 .section-contact-me form {
   grid-area: form;
 }
-.section-contact-me form div {
+.section-contact-me form div label {
   display: flex;
-  justify-content: flex-start;
-  padding: 0.5em;
+  margin-top: 30px;
 }
 
 .section-contact-me form div input,
