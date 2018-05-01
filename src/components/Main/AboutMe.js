@@ -42,11 +42,11 @@ const AboutMe = () => (
           My most recent project is a Demo of a Blog, that contains a CMS part to create new
           information for the site.
         </p>
-        <p>Frontend used : React , Bootstrap , CSS , html</p>
+        <p>Frontend used : React , Bootstrap , CSS , HTML</p>
         <p>Backend: Spring , Java , Postgres</p>
         <p>
           You can access the website here , it was deploy in heroku:
-          <a href="https://fierce-beach-47814.herokuapp.com/">blog demo</a>
+          <a href="https://blog-react-demo.herokuapp.com">blog demo</a>
         </p>
 
         <p>
