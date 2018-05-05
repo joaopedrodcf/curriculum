@@ -51,24 +51,26 @@ export default class ContactMe extends React.Component {
       <main>
         <section className="section-contact-me">
           <form onSubmit={this.sendMessage}>
-            <div>
-              <label htmlFor="name">
-                Your name:
-                <input type="text" name="name" value={name} onChange={this.handleChange} />
-              </label>
-            </div>
-            <div>
-              <label htmlFor="email">
-                Your email:
-                <input type="email" name="email" value={email} onChange={this.handleChange} />
-              </label>
-            </div>
-            <div>
-              <label htmlFor="message">
-                Your message:
-                <textarea name="message" value={message} onChange={this.handleChange} />
-              </label>
-            </div>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={name}
+              onChange={this.handleChange}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={this.handleChange}
+            />
+            <textarea
+              name="message"
+              placeholder="Message"
+              value={message}
+              onChange={this.handleChange}
+            />
             <button type="submit" value="Submit">
               Send
             </button>
