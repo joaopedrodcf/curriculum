@@ -242,7 +242,7 @@ form button {
 	background-color: #1B98E0;
 	cursor: pointer;
 	border: none;
-	box-shadow: 1px 1px 1px 1px gray;
+	box-shadow: 1px 0px 3px 0px gray;
 }
 
 form button:hover {
