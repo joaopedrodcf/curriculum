@@ -241,6 +241,39 @@ CONTACT ME
 
 /*
 =============================================================================================================================================
+PROJECTS
+=============================================================================================================================================
+*/
+
+.section-projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  border: black solid 1px;
+  box-shadow: 1px 1px 10px 1px gray;
+  padding: 30px;
+}
+
+.projects article {
+  margin-left: 30px;
+}
+
+.projects figure {
+  margin: 0px;
+}
+
+.projects figure img {
+  max-width: 100%;
+}
+
+/*
+=============================================================================================================================================
 FOOTER
 =============================================================================================================================================
 */
@@ -280,10 +313,19 @@ MEDIA QUERYS
 =============================================================================================================================================
 */
 
-@media (max-width: 1200px) {
+@media (max-width: 1450px) {
   .section-skills {
     display: flex;
     flex-direction: column;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects article {
+    margin-left: 0px;
   }
 }
 
