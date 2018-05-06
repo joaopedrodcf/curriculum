@@ -264,7 +264,7 @@ CONTACT ME
 }
 
 .invalid {
-	background-color: red;
+	border-bottom: 1px solid red !important;
 }
 
 /*
