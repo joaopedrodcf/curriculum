@@ -80,6 +80,24 @@ html ,
 	}
 }
 
+@keyframes fadeIn {
+	0% {
+		transform: scale(0);
+		opacity: .0;
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: scale(.9);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
 
 @keyframes spin {
 	100% {
@@ -256,7 +274,6 @@ section-skills
 	margin-bottom: 30px;
 	box-shadow: 1px 1px 10px 1px gray;
 	background-color: #E8F1F2;
-	animation: slideTop 2s forwards;
 }
 
 
@@ -285,6 +302,45 @@ section-skills
 	color: #1B98E0 !important;
 	padding: 0px;
 	margin: 0px;
+	animation: fadeIn 2s forwards;
+}
+
+/*
+=============================================================================================================================================
+PROJECTS
+=============================================================================================================================================
+*/
+
+.section-projects {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	/* align horizontal */
+	align-items: center;
+	/* align vertical */
+}
+
+.projects {
+	display: flex;
+	flex-direction: row;
+	border: black solid 1px;
+	box-shadow: 1px 1px 10px 1px gray;
+	padding: 30px;
+	background-color: #E8F1F2;
+	opacity: 0;
+	animation: fadeIn 2s forwards;
+}
+
+.projects article {
+	margin-left: 30px;
+}
+
+.projects figure {
+	margin: 0px;
+}
+
+.projects figure img {
+	max-width: 100%;
 }
 
 /*
@@ -311,7 +367,7 @@ CONTACT ME
 	align-items: stretch;
 	min-width: 40%;
 	background-color: #E8F1F2;
-	animation: slideBottom 1s forwards;
+	animation: slideLeft 1s forwards;
 }
 
 .section-contact-me form button {
@@ -350,42 +406,6 @@ CONTACT ME
 
 .invalid {
 	border-bottom: 1px solid red !important;
-}
-
-/*
-=============================================================================================================================================
-PROJECTS
-=============================================================================================================================================
-*/
-
-.section-projects {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	/* align horizontal */
-	align-items: center;
-	/* align vertical */
-}
-
-.projects {
-	display: flex;
-	flex-direction: row;
-	border: black solid 1px;
-	box-shadow: 1px 1px 10px 1px gray;
-	padding: 30px;
-	background-color: #E8F1F2;
-}
-
-.projects article {
-	margin-left: 30px;
-}
-
-.projects figure {
-	margin: 0px;
-}
-
-.projects figure img {
-	max-width: 100%;
 }
 
 /*
