@@ -29,12 +29,11 @@ export default class ContactMe extends React.Component {
     event.preventDefault();
 
     const { name, email, message } = this.state;
-    axios
-      .post(this.urlContact, {
-        name,
-        email,
-        message,
-      });
+    axios.post(this.urlContact, {
+      name,
+      email,
+      message,
+    });
 
     this.setState({
       name: '',
@@ -59,7 +58,10 @@ export default class ContactMe extends React.Component {
   handleBlur(event) {
     const { name } = event.target;
     this.setState({
-      touched: { ...this.state.touched, [name]: true },
+      touched: {
+        ...this.state.touched,
+        [name]: true,
+      },
     });
   }
 
@@ -90,37 +92,46 @@ export default class ContactMe extends React.Component {
     return (
       <main>
         <section className="section-contact-me">
-            <form noValidate onSubmit={this.sendMessage}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={name}
-                onChange={this.handleChange}
-                onBlur={this.handleBlur}
-                className={shouldMarkError('name') ? 'invalid' : ''}
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={email}
-                onChange={this.handleChange}
-                onBlur={this.handleBlur}
-                className={shouldMarkError('email') ? 'invalid' : ''}
-              />
-              <textarea
-                name="message"
-                placeholder="Message"
-                value={message}
-                onChange={this.handleChange}
-                onBlur={this.handleBlur}
-                className={shouldMarkError('message') ? 'invalid' : ''}
-              />
-              <button type="submit" value="Submit" disabled={hasErrors}>
-                <i className="fas fa-envelope fa-2x" />
-              </button>
-            </form>
+          <form noValidate onSubmit={this.sendMessage}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={name}
+              onChange={this.handleChange}
+              onBlur={this.handleBlur}
+              className={shouldMarkError('name') ? 'invalid' : ''}
+            />
+            <p className={shouldMarkError('name') ? 'tip tip-invalid' : 'tip hidden'}>
+              Your name can&apos;t be empty
+            </p>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={this.handleChange}
+              onBlur={this.handleBlur}
+              className={shouldMarkError('email') ? 'invalid' : ''}
+            />
+            <p className={shouldMarkError('email') ? 'tip tip-invalid' : 'tip hidden'}>
+              You must use a valid email
+            </p>
+            <textarea
+              name="message"
+              placeholder="Message"
+              value={message}
+              onChange={this.handleChange}
+              onBlur={this.handleBlur}
+              className={shouldMarkError('message') ? 'invalid' : ''}
+            />
+            <p className={shouldMarkError('message') ? 'tip tip-invalid' : 'tip hidden'}>
+              Your message can&apos;t be empty
+            </p>
+            <button type="submit" value="Submit" disabled={hasErrors}>
+              <i className="fas fa-envelope-open fa-2x" />
+            </button>
+          </form>
         </section>
       </main>
     );

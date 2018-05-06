@@ -4,12 +4,16 @@ COLOR SCHEME
 =============================================================================================================================================
 */
 
-/*
+/* blue
 13293d
 006494
 247ba0
 1b98e0
 e8f1f2
+*/
+
+/* red
+F0374D
 */
 
 /*
@@ -391,6 +395,7 @@ CONTACT ME
 	font: 16px Arial, Helvetica, sans-serif;
 	height: 45px;
 	background-color: #E8F1F2;
+	margin: 0px;
 }
 
 .section-contact-me form textarea {
@@ -398,16 +403,21 @@ CONTACT ME
 }
 
 .invalid {
-	border-bottom: 1px solid red !important;
+	border-bottom: 1px solid #F0374D !important;
 }
 
-.tip-invalid {
-	color: red;
+.tip {
 	margin: 0px;
 	padding: 0px;
 }
 
-.tip-valid {
+.tip-invalid {
+	color: #F0374D;
+	font-size: 15px;
+	padding-bottom: 15px;
+}
+
+.hidden {
 	visibility: hidden;
 }
 
