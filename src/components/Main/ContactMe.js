@@ -46,6 +46,11 @@ export default class ContactMe extends React.Component {
       name: '',
       email: '',
       message: '',
+      touched: {
+        email: false,
+        password: false,
+        message: false,
+      },
     });
   }
 
