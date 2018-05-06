@@ -28,6 +28,8 @@ html ,
 	height: 100%;
 	font-family: 'Open Sans', sans-serif;
 	text-align: justify;
+	overflow-x: hidden; /* https://stackoverflow.com/questions/36104991/transform-translate-with-positive-value-make-a-scrollbar */
+	overflow-y: hidden;
 }
 
 .grid-container {
@@ -37,6 +39,56 @@ html ,
 	grid-template-areas: 'header header header' ' . main . ' 'footer footer footer';
 	grid-gap: 20px;
 }
+
+.goog-te-banner-frame.skiptranslate {
+	display: none !important;
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(-900px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(900px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideTop {
+	0% {
+		transform: translateY(-900px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideBottom {
+	0% {
+		transform: translateY(900px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+
 
 /*
 Increase the Font Size - https://cssnewbie.com/make-beautiful-hyperlinks-using-css/
@@ -85,10 +137,13 @@ HEADER LOGO
 	justify-content: center;
 }
 
+
+
 .logo {
 	width: 50px;
 	height: 50px;
 	margin: auto 10px;
+	animation: spin .6s forwards;
 }
 
 /*
@@ -150,6 +205,7 @@ MAIN SECTION
 	border-left: 4px solid lightslategrey;
 	padding-left: 20px;
 	grid-area: article;
+	animation: slideRight .6s forwards;
 }
 
 .section-about-me article h1 {
@@ -165,6 +221,7 @@ MAIN SECTION
 .section-about-me figure {
 	margin: auto 20px;
 	grid-area: figure;
+	animation: slideLeft .6s forwards;
 }
 
 .section-about-me figure img {
@@ -199,7 +256,9 @@ section-skills
 	margin-bottom: 30px;
 	box-shadow: 1px 1px 10px 1px gray;
 	background-color: #E8F1F2;
+	animation: slideTop 2s forwards;
 }
+
 
 .skill {
 	padding: 0px;
@@ -220,6 +279,7 @@ section-skills
 	background-color: #247BA0;
 	box-shadow: 0px 1px 5px 0px gray;
 }
+
 
 .fa-star {
 	color: #1B98E0 !important;
@@ -251,6 +311,7 @@ CONTACT ME
 	align-items: stretch;
 	min-width: 40%;
 	background-color: #E8F1F2;
+	animation: slideBottom 1s forwards;
 }
 
 .section-contact-me form button {
