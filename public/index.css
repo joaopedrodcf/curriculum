@@ -237,7 +237,7 @@ CONTACT ME
 	min-width: 40%;
 }
 
-form button {
+.section-contact-me form button {
 	padding: 10px 20px;
 	background-color: #1B98E0;
 	cursor: pointer;
@@ -245,18 +245,26 @@ form button {
 	box-shadow: 1px 0px 3px 0px gray;
 }
 
-form button:hover {
+.section-contact-me form button:hover {
 	background-color: #247BA0;
 }
 
-form input ,
-form textarea {
+.section-contact-me form input ,
+.section-contact-me form textarea {
 	box-sizing: border-box;
 	border: none;
 	border-bottom: 1px solid #E8F1F2;
 	margin-bottom: 10px;
 	font: 16px Arial, Helvetica, sans-serif;
 	height: 45px;
+}
+
+.section-contact-me form textarea {
+	height: 35px;
+}
+
+.invalid {
+	background-color: red;
 }
 
 /*
