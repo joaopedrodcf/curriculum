@@ -34,12 +34,6 @@ export default class ContactMe extends React.Component {
         name,
         email,
         message,
-      })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((error) => {
-        console.error(error);
       });
 
     this.setState({
@@ -96,37 +90,37 @@ export default class ContactMe extends React.Component {
     return (
       <main>
         <section className="section-contact-me">
-          <form noValidate onSubmit={this.sendMessage}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={name}
-              onChange={this.handleChange}
-              onBlur={this.handleBlur}
-              className={shouldMarkError('name') ? 'invalid' : ''}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={email}
-              onChange={this.handleChange}
-              onBlur={this.handleBlur}
-              className={shouldMarkError('email') ? 'invalid' : ''}
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              value={message}
-              onChange={this.handleChange}
-              onBlur={this.handleBlur}
-              className={shouldMarkError('message') ? 'invalid' : ''}
-            />
-            <button type="submit" value="Submit" disabled={hasErrors}>
-              <i className="fas fa-envelope fa-2x" />
-            </button>
-          </form>
+            <form noValidate onSubmit={this.sendMessage}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={name}
+                onChange={this.handleChange}
+                onBlur={this.handleBlur}
+                className={shouldMarkError('name') ? 'invalid' : ''}
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={email}
+                onChange={this.handleChange}
+                onBlur={this.handleBlur}
+                className={shouldMarkError('email') ? 'invalid' : ''}
+              />
+              <textarea
+                name="message"
+                placeholder="Message"
+                value={message}
+                onChange={this.handleChange}
+                onBlur={this.handleBlur}
+                className={shouldMarkError('message') ? 'invalid' : ''}
+              />
+              <button type="submit" value="Submit" disabled={hasErrors}>
+                <i className="fas fa-envelope fa-2x" />
+              </button>
+            </form>
         </section>
       </main>
     );
