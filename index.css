@@ -83,7 +83,7 @@ html ,
 @keyframes fadeIn {
 	0% {
 		transform: scale(0);
-		opacity: .0;
+		opacity: 0;
 	}
 	60% {
 		transform: scale(1.1);
@@ -98,15 +98,11 @@ html ,
 	}
 }
 
-
 @keyframes spin {
 	100% {
 		transform: rotate(360deg);
 	}
 }
-
-
-
 
 /*
 Increase the Font Size - https://cssnewbie.com/make-beautiful-hyperlinks-using-css/
@@ -154,8 +150,6 @@ HEADER LOGO
 	display: flex;
 	justify-content: center;
 }
-
-
 
 .logo {
 	width: 50px;
@@ -276,7 +270,6 @@ section-skills
 	background-color: #E8F1F2;
 }
 
-
 .skill {
 	padding: 0px;
 }
@@ -295,8 +288,8 @@ section-skills
 	padding: 20px;
 	background-color: #247BA0;
 	box-shadow: 0px 1px 5px 0px gray;
+	text-align: center;
 }
-
 
 .fa-star {
 	color: #1B98E0 !important;
@@ -408,6 +401,16 @@ CONTACT ME
 	border-bottom: 1px solid red !important;
 }
 
+.tip-invalid {
+	color: red;
+	margin: 0px;
+	padding: 0px;
+}
+
+.tip-valid {
+	visibility: hidden;
+}
+
 /*
 =============================================================================================================================================
 FOOTER
@@ -449,6 +452,13 @@ MEDIA QUERYS
 */
 
 @media (max-width: 1450px) {
+	body ,
+	html ,
+	#root ,
+	.grid-container {
+		overflow-y: initial;
+	}
+
 	.section-skills {
 		display: flex;
 		flex-direction: column;
