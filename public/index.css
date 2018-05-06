@@ -265,6 +265,13 @@ CONTACT ME
 	background-color: #247BA0;
 }
 
+.section-contact-me button:disabled ,
+.section-contact-me button[disabled]:hover {
+	border: 1px solid #999999;
+	background-color: #CCCCCC;
+	color: #666666;
+}
+
 .section-contact-me form input ,
 .section-contact-me form textarea {
 	box-sizing: border-box;
