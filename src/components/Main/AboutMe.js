@@ -5,53 +5,23 @@ const AboutMe = () => (
     <section className="section-about-me">
       <figure>
         <img src="me.jpeg" alt="about-me-img" />
-        <figcaption>Web developer</figcaption>
+        <figcaption>João Ferreira</figcaption>
       </figure>
       <article>
         <h1>About me</h1>
+        <h5>Portuguese full stack developer passionate for web developing</h5>
         <p>
-          Since I can remember, I&apos;ve always loved computers and technology, and that was the
-          spark I needed to begin studying computer science.
+          I always have been passionate with web development and for that reason I have been
+          creating since this year began open source software with lots of new languages that I
+          wanted to really learn. Started working on a blog project to learn React Js and JS6, and
+          learned the basics. After that thaugh that would be great to have a portfolio and to learn
+          a little bit more of design, so started this project and learned CSS Grid and Flexbox.
         </p>
-
         <p>
-          Got my bachelor&apos;s degree in computer science in 2017, and during those years learned
-          so much about Java , C , Javascript and PHP.
-        </p>
-
-        <p>
-          After graduating been working at TIMWE where I&apos;m a software developer, in so little
-          time learned so much and gained lots of resposabiltys. I can highlight the build of new
-          Rest Apis in Java with JAX-RS, the knowledge of Linux machines, and the giant Maven
-          dependencys Management.
-        </p>
-
-        <p>
-          As today I&apos;m working in APPBOX product, an Android APP. I&apos;m one of the backend
-          developers of the project and been creating new Webapps, creating new databases for the
-          Oracle Sql part of the app and even been using Elastic Search.
-        </p>
-
-        <p>
-          My interst are the development of websites , apps for android, and open source software.
-          As so I have been improving my Github page with little Demo projects that can show my
-          skills and help the community.
-        </p>
-
-        <p>
-          My most recent project is a Demo of a Blog, that contains a CMS part to create new
-          information for the site.
-        </p>
-        <p>Frontend used : React , Bootstrap , CSS , HTML</p>
-        <p>Backend: Spring , Java , Postgres</p>
-        <p>
-          You can access the website here , it was deploy in heroku:
-          <a href="https://blog-react-demo.herokuapp.com">blog demo</a>
-        </p>
-
-        <p>
-          I&apos;m always trying to improve myself and I&apos;m always open to new opportunities so
-          feel free to contact me!
+          My main objective this year is to learn really well how to work on MERN projects and
+          create projects on github that the community can contribute and improve, that would be
+          really great. I&apos;m always available for new challenges and if you think you have the
+          right opportunity for me you can contact me from here.
         </p>
       </article>
     </section>

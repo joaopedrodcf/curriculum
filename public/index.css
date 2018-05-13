@@ -22,7 +22,10 @@ GLOBALS
 =============================================================================================================================================
 */
 
-body, html, #root, .grid-container {
+body,
+html,
+#root,
+.grid-container {
   margin: 0px;
   padding: 0px;
   background-color: white;
@@ -180,7 +183,8 @@ NAVBAR
   color: white;
 }
 
-.nav-links a:hover, .nav-links-active {
+.nav-links a:hover,
+.nav-links-active {
   border-bottom: 4px solid #ffffff;
 }
 
@@ -223,6 +227,10 @@ MAIN SECTION
 
 .section-about-me article h1 {
   font-size: 2em;
+}
+
+.section-about-me article h5 {
+  font-size: 1.1em;
 }
 
 .section-about-me article p {
@@ -375,13 +383,15 @@ CONTACT ME
   background-color: #247ba0;
 }
 
-.section-contact-me button:disabled, .section-contact-me button[disabled]:hover {
+.section-contact-me button:disabled,
+.section-contact-me button[disabled]:hover {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
 }
 
-.section-contact-me form input, .section-contact-me form textarea {
+.section-contact-me form input,
+.section-contact-me form textarea {
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid #247ba0;
@@ -456,7 +466,10 @@ MEDIA QUERYS
 */
 
 @media (max-width: 1450px) {
-  body, html, #root, .grid-container {
+  body,
+  html,
+  #root,
+  .grid-container {
     overflow-y: initial;
   }
   .section-skills {
