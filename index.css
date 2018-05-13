@@ -49,6 +49,14 @@ html,
   display: none !important;
 }
 
+.display-none {
+  display: none;
+}
+
+.display-show {
+  display: unset;
+}
+
 @keyframes slideLeft {
   0% {
     transform: translateX(-900px);
@@ -133,16 +141,19 @@ HEADER
 */
 
 .header-site {
-  /*
-  background-image: url("https://images.unsplash.com/photo-1516101922849-2bf0be616449?ixlib=rb-0.3.5&s=e4b81ba6ba6aaff25fc3e7caced7093d&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb");
-  */
   background-color: #13293d;
   background-position: center;
   background-size: cover;
   display: flex;
   grid-area: header;
-  justify-content: space-between;
   box-shadow: 1px 1px 5px 1px gray;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo-toogle {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*
@@ -169,22 +180,49 @@ NAVBAR
 =============================================================================================================================================
 */
 
-.nav-links {
+.nav-links,
+.toogle-nav-links {
   margin: auto 10px;
   padding: 0;
   list-style: none;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.nav-links a {
-  margin: 0px 10px;
+.nav-links a,
+.toogle-nav-links a {
+  margin: auto 10px;
+  padding: 15px 0px;
   text-decoration: none;
   color: white;
 }
 
+.nav-toggler {
+  display: flex;
+  align-items: center;
+}
+.header-site button {
+  background: none;
+  border: none;
+}
+
+.fa-bars {
+  margin: auto 10px;
+  color: white !important;
+  padding: 0px;
+  display: none;
+}
+
+.fa-bars:hover {
+  margin: auto 10px;
+  color: #1b98e0 !important;
+  padding: 0px;
+}
+
 .nav-links a:hover,
-.nav-links-active {
+.nav-links-active,
+.toogle-nav-links a:hover {
   border-bottom: 4px solid #ffffff;
 }
 
@@ -489,9 +527,7 @@ MEDIA QUERYS
   .grid-container {
     grid-template-rows: auto 1fr auto;
   }
-  .header-site {
-    flex-flow: column;
-  }
+
   .section-about-me {
     grid-template-areas: "figure figure" "article article";
   }
@@ -507,9 +543,23 @@ MEDIA QUERYS
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
+  .fa-bars {
+    display: initial;
+  }
+
+  .header-site {
+    display: flex;
+    flex-direction: column;
+    align-items: unset; /*Correct the center*/
+  }
+
+  .toogle-nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+
   .nav-links {
-    text-align: center;
-    flex-flow: column;
+    display: none;
   }
 }
