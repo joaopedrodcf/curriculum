@@ -14,7 +14,7 @@ const AboutMe = () => (
           I always have been passionate with web development and for that reason I have been
           creating since this year began open source software with lots of new languages that I
           wanted to really learn. Started working on a blog project to learn React Js and JS6, and
-          learned the basics. After that thaugh that would be great to have a portfolio and to learn
+          learned the basics. After that taught that would be great to have a portfolio and to learn
           a little bit more of design, so started this project and learned CSS Grid and Flexbox.
         </p>
         <p>
