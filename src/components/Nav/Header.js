@@ -1,28 +1,64 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Header = () => (
-  <header className="header-site">
-    <div className="header-logo">
-      <img className="logo" src="my_first_logo.png" alt="about-me-img" />
-    </div>
-    <nav>
-      <div className="nav-links">
-        <NavLink activeClassName="nav-links-active" exact to="/">
-          <p>About me</p>
-        </NavLink>
-        <NavLink activeClassName="nav-links-active" exact to="/skills">
-          <p>Skills</p>
-        </NavLink>
-        <NavLink activeClassName="nav-links-active" exact to="/projects">
-          <p>Projects</p>
-        </NavLink>
-        <NavLink activeClassName="nav-links-active" exact to="/contactme">
-          <p>Contact me</p>
-        </NavLink>
-      </div>
-    </nav>
-  </header>
-);
+export default class Header extends React.Component {
+  constructor(props) {
+    super(props);
 
-export default Header;
+    this.state = {
+      toogle: false,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(event) {
+    event.preventDefault();
+
+    this.setState({ toogle: !this.state.toogle });
+  }
+
+  render() {
+    return (
+      <header className="header-site">
+        <div className="header-logo-toogle">
+          <div className="header-logo">
+            <img className="logo" src="my_first_logo.png" alt="about-me-img" />
+          </div>
+          <button onClick={this.handleClick}>
+            <i className="fas fa-bars fa-2x" />
+          </button>
+        </div>
+
+        <nav className={this.state.toogle ? 'toogle-nav-links display-show' : 'display-none'}>
+          <NavLink activeClassName="nav-links-active" exact to="/">
+            About me
+          </NavLink>
+          <NavLink activeClassName="nav-links-active" exact to="/skills">
+            Skills
+          </NavLink>
+          <NavLink activeClassName="nav-links-active" exact to="/projects">
+            Projects
+          </NavLink>
+          <NavLink activeClassName="nav-links-active" exact to="/contactme">
+            Contact me
+          </NavLink>
+        </nav>
+
+        <nav className="nav-links">
+          <NavLink activeClassName="nav-links-active" exact to="/">
+            About me
+          </NavLink>
+          <NavLink activeClassName="nav-links-active" exact to="/skills">
+            Skills
+          </NavLink>
+          <NavLink activeClassName="nav-links-active" exact to="/projects">
+            Projects
+          </NavLink>
+          <NavLink activeClassName="nav-links-active" exact to="/contactme">
+            Contact me
+          </NavLink>
+        </nav>
+      </header>
+    );
+  }
+}
