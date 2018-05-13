@@ -1,20 +1,23 @@
 import React from 'react';
 import axios from 'axios';
 
+// Reset state https://stackoverflow.com/questions/34845650/clearing-state-es6-react
+const initialState = {
+  name: '',
+  email: '',
+  message: '',
+  touched: {
+    email: false,
+    name: false,
+    message: false,
+  },
+};
+
 export default class ContactMe extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      name: '',
-      email: '',
-      message: '',
-      touched: {
-        email: false,
-        password: false,
-        message: false,
-      },
-    };
+    this.state = initialState;
 
     this.endpointEmail = '/send-email';
     this.urlContact = process.env.REACT_APP_API_HOST + this.endpointEmail;
@@ -35,16 +38,7 @@ export default class ContactMe extends React.Component {
       message,
     });
 
-    this.setState({
-      name: '',
-      email: '',
-      message: '',
-      touched: {
-        email: false,
-        password: false,
-        message: false,
-      },
-    });
+    this.setState(initialState);
   }
 
   handleChange(event) {
