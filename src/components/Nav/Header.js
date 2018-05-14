@@ -32,7 +32,7 @@ export default class Header extends React.Component {
         </div>
 
         <MediaQuery maxWidth={500}>
-          <nav className={this.state.toogle ? 'toogle-nav-links display-show' : 'display-none'}>
+          <nav className={this.state.toogle ? 'nav-links display-show' : 'display-none'}>
             <NavLink activeClassName="nav-links-active" exact to="/">
               About me
             </NavLink>
