@@ -12,11 +12,11 @@ const AboutMe = () => (
         <h5>Portuguese Full-stack developer passionate for web developing</h5>
         <p>
           I always have been passionate with <strong>Web Development</strong> and for that reason I
-          have been creating since this year began <strong>Open-source software</strong> with lots
-          of new languages that I wanted to really learn. Started working on a blog project to learn
+          have been creating since this year began <strong>Open-source Software</strong> with lots
+          of new languages that I wanted to really learn. Started working on a blog project to learn{' '}
           <strong>React Js</strong> and <strong>JS6</strong>, and learned the basics. After that
           taught that would be great to have a portfolio and to learn a little bit more of design,
-          so started this project and learned <strong>CSS Grid</strong> and <strong>Flexbox</strong>.
+          so started this project and learned <strong>CSS Grid</strong> and <strong>Flexbox</strong>.{' '}
         </p>
         <p>
           My main objective this year is to learn really well how to work on <strong>MERN</strong>{' '}
