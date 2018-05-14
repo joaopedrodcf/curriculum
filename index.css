@@ -264,15 +264,15 @@ MAIN SECTION
 }
 
 .section-about-me article h1 {
-  font-size: 2em;
+  font-size: 2.2em;
 }
 
 .section-about-me article h5 {
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
 .section-about-me article p {
-  font-size: 0.9em;
+  font-size: 1.1em;
   color: gray;
 }
 
