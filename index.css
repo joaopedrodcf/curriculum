@@ -180,8 +180,7 @@ NAVBAR
 =============================================================================================================================================
 */
 
-.nav-links,
-.toogle-nav-links {
+.nav-links {
   margin: auto 10px;
   padding: 0;
   list-style: none;
@@ -190,8 +189,7 @@ NAVBAR
   justify-content: center;
 }
 
-.nav-links a,
-.toogle-nav-links a {
+.nav-links a {
   margin: auto 10px;
   padding: 15px 0px;
   text-decoration: none;
@@ -489,7 +487,7 @@ footer a {
   transition: 0.3s;
   font-weight: bold;
   text-decoration: none;
-  color: powderblue;
+  color: #e8f1f2;
 }
 
 footer a:hover {
@@ -557,13 +555,9 @@ MEDIA QUERYS
     align-items: unset; /*Correct the center*/
   }
 
-  .toogle-nav-links {
+  .nav-links {
     display: flex;
     flex-direction: column;
-  }
-
-  .nav-links {
-    display: none;
   }
 
   footer {
