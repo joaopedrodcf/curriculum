@@ -40,7 +40,7 @@ html,
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
-  grid-template-rows: 60px 1fr 110px;
+  grid-template-rows: 60px 1fr 90px;
   grid-template-areas: "header header header" " . main . " "footer footer footer";
   grid-gap: 20px;
 }
@@ -475,7 +475,9 @@ footer {
   box-shadow: 1px 1px 10px 1px gray;
   padding: 20px 0px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 footer div {
