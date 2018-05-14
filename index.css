@@ -310,7 +310,6 @@ section-skills
 }
 
 .skills {
-  border: black solid 1px;
   margin-bottom: 30px;
   box-shadow: 1px 1px 10px 1px gray;
   background-color: #e8f1f2;
@@ -362,7 +361,6 @@ PROJECTS
 .projects {
   display: flex;
   flex-direction: row;
-  border: black solid 1px;
   box-shadow: 1px 1px 10px 1px gray;
   padding: 30px;
   background-color: #e8f1f2;
@@ -396,7 +394,6 @@ CONTACT ME
 }
 
 .section-contact-me form {
-  border: black solid 1px;
   margin-bottom: 30px;
   box-shadow: 1px 1px 10px 1px gray;
   padding: 30px;
