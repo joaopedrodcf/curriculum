@@ -40,7 +40,7 @@ html,
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
-  grid-template-rows: 60px 1fr 100px;
+  grid-template-rows: 60px 1fr 110px;
   grid-template-areas: "header header header" " . main . " "footer footer footer";
   grid-gap: 20px;
 }
@@ -472,16 +472,16 @@ FOOTER
 footer {
   grid-area: footer;
   background-color: #006494;
-  display: flex;
-  flex: row;
   box-shadow: 1px 1px 10px 1px gray;
-  justify-content: center;
   padding: 20px 0px;
+  display: flex;
+  justify-content: center;
 }
 
 footer div {
   margin-left: 10px;
   margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 footer a {
@@ -561,5 +561,10 @@ MEDIA QUERYS
 
   .nav-links {
     display: none;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
   }
 }
