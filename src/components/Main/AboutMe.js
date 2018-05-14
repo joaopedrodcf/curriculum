@@ -19,7 +19,7 @@ const AboutMe = () => (
           so started this project and learned <strong>CSS Grid</strong> and <strong>Flexbox</strong>.
         </p>
         <p>
-          My main objective this year is to learn really well how to work on <strong>MERN</strong>
+          My main objective this year is to learn really well how to work on <strong>MERN</strong>{' '}
           projects and create projects on github that the community can contribute and improve, that
           would be really great. I&apos;m always available for new challenges and if you think you
           have the right opportunity for me you can contact me from here.
