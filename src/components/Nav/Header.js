@@ -8,7 +8,6 @@ export default class Header extends React.Component {
 
     this.state = {
       toogle: false,
-      header: true,
     };
     this.handleClick = this.handleClick.bind(this);
   }
