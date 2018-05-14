@@ -4,12 +4,12 @@ import React from 'react';
 const Footer = () => (
   <footer>
     <div>
-      <i className="fab fa-github fa-3x" />
-      <a href="https://github.com/joaopedrodcf">Github page</a>
-    </div>
-    <div>
-      <i className="fab fa-linkedin fa-3x" />
-      <a href="https://www.linkedin.com/in/joaoferr93/">Linkedin page</a>
+      <a href="https://github.com/joaopedrodcf">
+        <i className="fab fa-github fa-3x" />
+      </a>
+      <a href="https://www.linkedin.com/in/joaoferr93/">
+        <i className="fab fa-linkedin fa-3x" />
+      </a>
     </div>
   </footer>
 );
