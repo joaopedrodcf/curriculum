@@ -538,7 +538,7 @@ MEDIA QUERYS
   }
 
   .fa-bars {
-    display: initial;
+    display: unset !important;
   }
 
   .header-site {
