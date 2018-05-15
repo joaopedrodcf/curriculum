@@ -26,13 +26,14 @@ body,
 html,
 #root,
 .grid-container {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   background-color: white;
   height: 100%;
   font-family: "Open Sans", sans-serif;
   text-align: justify;
   overflow-x: hidden;
+
   /* https://stackoverflow.com/questions/36104991/transform-translate-with-positive-value-make-a-scrollbar */
   overflow-y: hidden;
 }
@@ -61,6 +62,7 @@ html,
   0% {
     transform: translateX(-900px);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -70,6 +72,7 @@ html,
   0% {
     transform: translateX(900px);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -79,6 +82,7 @@ html,
   0% {
     transform: translateY(-900px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -88,6 +92,7 @@ html,
   0% {
     transform: translateY(900px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -98,13 +103,16 @@ html,
     transform: scale(0);
     opacity: 0;
   }
+
   60% {
     transform: scale(1.1);
   }
+
   80% {
     transform: scale(0.9);
     opacity: 1;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -115,23 +123,6 @@ html,
   100% {
     transform: rotate(360deg);
   }
-}
-
-/*
-Increase the Font Size - https://cssnewbie.com/make-beautiful-hyperlinks-using-css/
-*/
-
-article a {
-  margin-left: 10px;
-  display: inline-block;
-  transition: 0.3s;
-  font-weight: bold;
-  text-decoration: none;
-  color: #1b98e0;
-}
-
-article a:hover {
-  transform: scale(1.2);
 }
 
 /*
@@ -162,12 +153,12 @@ HEADER LOGO
 =============================================================================================================================================
 */
 
-.header-logo {
+.header-logo-toogle .header-logo {
   display: flex;
   justify-content: center;
 }
 
-.logo {
+.header-logo-toogle .logo {
   width: 50px;
   height: 50px;
   margin: auto 10px;
@@ -180,7 +171,7 @@ NAVBAR
 =============================================================================================================================================
 */
 
-.nav-links {
+.header-site .nav-links {
   margin: auto 10px;
   padding: 0;
   list-style: none;
@@ -191,37 +182,32 @@ NAVBAR
 
 .nav-links a {
   margin: auto 10px;
-  padding: 15px 0px;
+  padding: 15px 0;
   text-decoration: none;
   color: white;
 }
 
-.nav-toggler {
-  display: flex;
-  align-items: center;
+.nav-links a:hover,
+.nav-links-active {
+  border-bottom: 4px solid #fff;
 }
+
 .header-site button {
   background: none;
   border: none;
 }
 
-.fa-bars {
+.header-site .fa-bars {
   margin: auto 10px;
   color: white !important;
-  padding: 0px;
+  padding: 0;
   display: none;
 }
 
-.fa-bars:hover {
+.header-site .fa-bars:hover {
   margin: auto 10px;
   color: #1b98e0 !important;
-  padding: 0px;
-}
-
-.nav-links a:hover,
-.nav-links-active,
-.toogle-nav-links a:hover {
-  border-bottom: 4px solid #ffffff;
+  padding: 0;
 }
 
 /*
@@ -232,8 +218,8 @@ MAIN
 
 main {
   grid-area: main;
-  min-width: 0px;
-  margin: auto 0px;
+  min-width: 0;
+  margin: auto 0;
 }
 
 /*
@@ -307,37 +293,37 @@ section-skills
   display: flex;
 }
 
-.skills {
+.section-skills .skills {
   margin-bottom: 30px;
   box-shadow: 1px 1px 10px 1px gray;
   background-color: #e8f1f2;
 }
 
-.skill {
-  padding: 0px;
+.section-skills .skills h1 {
+  margin: auto 0;
+  padding: 20px;
+  background-color: #247ba0;
+  box-shadow: 0 1px 5px 0 gray;
+  text-align: center;
 }
 
-.skills li {
+.section-skills .skills li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   list-style: none;
   padding: 10px;
-  margin: 0px 20px;
+  margin: 0 20px;
 }
 
-.skills h1 {
-  margin: auto 0px;
-  padding: 20px;
-  background-color: #247ba0;
-  box-shadow: 0px 1px 5px 0px gray;
-  text-align: center;
+.section-skills .skill {
+  padding: 0;
 }
 
-.fa-star {
+.section-skills .fa-star {
   color: #1b98e0 !important;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   animation: fadeIn 2s forwards;
 }
 
@@ -351,8 +337,10 @@ PROJECTS
   display: flex;
   flex-direction: row;
   justify-content: center;
+
   /* align horizontal */
   align-items: center;
+
   /* align vertical */
 }
 
@@ -371,7 +359,7 @@ PROJECTS
 }
 
 .projects figure {
-  margin: 0px;
+  margin: 0;
 }
 
 .projects figure img {
@@ -409,18 +397,18 @@ CONTACT ME
   background-color: #1b98e0;
   cursor: pointer;
   border: none;
-  box-shadow: 1px 0px 3px 0px gray;
+  box-shadow: 1px 0 3px 0 gray;
+}
+
+.section-contact-me form button:disabled,
+.section-contact-me form button[disabled]:hover {
+  border: 1px solid #999;
+  background-color: #ccc;
+  color: #666;
 }
 
 .section-contact-me form button:hover {
   background-color: #247ba0;
-}
-
-.section-contact-me button:disabled,
-.section-contact-me button[disabled]:hover {
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
 }
 
 .section-contact-me form input,
@@ -428,11 +416,9 @@ CONTACT ME
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid #247ba0;
-  margin-bottom: 10px;
   font: 16px Arial, Helvetica, sans-serif;
   height: 45px;
   background-color: #e8f1f2;
-  margin: 0px;
 }
 
 .section-contact-me form textarea {
@@ -444,8 +430,8 @@ CONTACT ME
 }
 
 .tip {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .tip-invalid {
@@ -468,7 +454,7 @@ footer {
   grid-area: footer;
   background-color: #006494;
   box-shadow: 1px 1px 10px 1px gray;
-  padding: 20px 0px;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -481,7 +467,7 @@ footer div {
   margin-bottom: 10px;
 }
 
-footer a {
+.footer-links a {
   margin-left: 20px;
   display: inline-block;
   transition: 0.3s;
@@ -490,7 +476,7 @@ footer a {
   color: #e8f1f2;
 }
 
-footer a:hover {
+.footer-links a:hover {
   transform: scale(1.2);
 }
 
@@ -507,16 +493,19 @@ MEDIA QUERYS
   .grid-container {
     overflow-y: initial;
   }
+
   .section-skills {
     display: flex;
     flex-direction: column;
   }
+
   .projects {
     display: flex;
     flex-direction: column;
   }
+
   .projects article {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 
@@ -528,12 +517,15 @@ MEDIA QUERYS
   .section-about-me {
     grid-template-areas: "figure figure" "article article";
   }
+
   .section-about-me figure {
     justify-self: center;
   }
+
   .header-site h1 {
     font-size: 1.1em;
   }
+
   .section-skills {
     display: flex;
     flex-direction: column;
@@ -546,13 +538,15 @@ MEDIA QUERYS
   }
 
   .fa-bars {
-    display: initial;
+    display: unset !important;
   }
 
   .header-site {
     display: flex;
     flex-direction: column;
-    align-items: unset; /*Correct the center*/
+    align-items: unset;
+
+    /* Correct the center */
   }
 
   .nav-links {
