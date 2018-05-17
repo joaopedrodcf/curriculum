@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import React from 'react';
 
-const NavLinks = () => (
-  <nav className="nav-links">
+const NavLinks = ({ props }) => (
+  <nav className={`nav-links ${props}`}>
     <NavLink activeClassName="nav-links-active" exact to="/">
       About me
     </NavLink>

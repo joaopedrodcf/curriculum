@@ -9,13 +9,14 @@ const Projects = () => (
           <figcaption>Blog demo</figcaption>
         </figure>
         <article>
-          <h1>Blog demo using React and Spring</h1>
+          <h5>Blog demo using React and Spring</h5>
           <p>
-            My first time learning react made this demo of a blog, here you can create posts, types,
-            see a dashboard with all the posts and have CRUD operations
-          </p>
-          <p>
-            You can access the website here , it was deploy in heroku:
+            <strong>React</strong> is used with <strong>react-router</strong> to switch pages withou
+            reloading the all page, used <strong>bootstrap</strong> to design the page in a simple
+            way. Created a CMS section called dashboard to create new posts, delete current ones
+            ,create types of posts, basicilly CRUD operations. It contains a contact form that
+            validates onChange and onBlur the form. The Backend was built with <strong>Java</strong>{' '}
+            and the framework <strong>Spring</strong>. It was deployed on heroku:{' '}
             <a href="https://blog-react-demo.herokuapp.com">blog demo</a>
           </p>
         </article>

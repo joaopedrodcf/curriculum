@@ -31,26 +31,23 @@ const SkillDiv = ({ nameOfSkill, skill }) => (
 
 const skillProgrammingLanguages = [
   { name: 'Java', stars: 4 },
-  { name: 'Javascript (ECMA 2015 / ES6)', stars: 3 },
+  { name: 'Javascript', stars: 3 },
   { name: 'PHP', stars: 3 },
   { name: 'Bash', stars: 2 },
 ];
 
 const skillFrameworks = [
   { name: 'Bootstrap', stars: 5 },
-  { name: 'React JS (ECMA 2015 / ES6)', stars: 4 },
+  { name: 'React JS', stars: 4 },
   { name: 'Spring', stars: 3 },
   { name: 'Codeigniter', stars: 3 },
 ];
 
-const skillSoftware = [
-  { name: 'Eclipse', stars: 5 },
-  { name: 'Vscode (ECMA 2015 / ES6)', stars: 5 },
-];
+const skillSoftware = [{ name: 'Eclipse', stars: 5 }, { name: 'Vscode', stars: 5 }];
 
 const skillMarkupLanguages = [
   { name: 'HTML / CSS', stars: 4 },
-  { name: 'Flexbox (ECMA 2015 / ES6)', stars: 3 },
+  { name: 'Flexbox', stars: 3 },
   { name: 'CSS Grid', stars: 3 },
 ];
 

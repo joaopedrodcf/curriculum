@@ -1,5 +1,4 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
 import NavLinks from './NavLinks';
 
 export default class Header extends React.Component {
@@ -29,10 +28,7 @@ export default class Header extends React.Component {
             <i className="fas fa-bars fa-2x" />
           </button>
         </div>
-        <MediaQuery maxWidth={500}>{this.state.toogle && <NavLinks />}</MediaQuery>
-        <MediaQuery minWidth={500}>
-          <NavLinks />
-        </MediaQuery>
+        <NavLinks props={this.state.toogle ? 'responsive' : ''} />
       </header>
     );
   }
