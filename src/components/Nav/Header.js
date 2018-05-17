@@ -1,6 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
+import NavLinks from './NavLinks';
+
+console.log(window.innerWidth);
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -29,39 +32,10 @@ export default class Header extends React.Component {
             <i className="fas fa-bars fa-2x" />
           </button>
         </div>
-
-        <MediaQuery maxWidth={500}>
-          <nav className={this.state.toogle ? 'nav-links display-show' : 'display-none'}>
-            <NavLink activeClassName="nav-links-active" exact to="/">
-              About me
-            </NavLink>
-            <NavLink activeClassName="nav-links-active" exact to="/skills">
-              Skills
-            </NavLink>
-            <NavLink activeClassName="nav-links-active" exact to="/projects">
-              Projects
-            </NavLink>
-            <NavLink activeClassName="nav-links-active" exact to="/contactme">
-              Contact me
-            </NavLink>
-          </nav>
-        </MediaQuery>
-
+        console.log(window.innerWidth);
+        <MediaQuery maxWidth={500}>{this.state.toogle && <NavLinks />}</MediaQuery>
         <MediaQuery minWidth={500}>
-          <nav className="nav-links">
-            <NavLink activeClassName="nav-links-active" exact to="/">
-              About me
-            </NavLink>
-            <NavLink activeClassName="nav-links-active" exact to="/skills">
-              Skills
-            </NavLink>
-            <NavLink activeClassName="nav-links-active" exact to="/projects">
-              Projects
-            </NavLink>
-            <NavLink activeClassName="nav-links-active" exact to="/contactme">
-              Contact me
-            </NavLink>
-          </nav>
+          <NavLinks />
         </MediaQuery>
       </header>
     );
