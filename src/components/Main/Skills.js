@@ -13,107 +13,57 @@ const Stars = ({ checked }) => {
   return stars;
 };
 
+const SkillDiv = ({ nameOfSkill, skill }) => (
+  <div className="skills">
+    <h1>{nameOfSkill}</h1>
+    <ul className="skill">
+      {skill.map(({ name, stars }) => (
+        <li>
+          <div>{name}</div>
+          <div>
+            <Stars checked={stars} />
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
+const skillProgrammingLanguages = [
+  { name: 'Java', stars: 4 },
+  { name: 'Javascript (ECMA 2015 / ES6)', stars: 3 },
+  { name: 'PHP', stars: 3 },
+  { name: 'Bash', stars: 2 },
+];
+
+const skillFrameworks = [
+  { name: 'Bootstrap', stars: 5 },
+  { name: 'React JS (ECMA 2015 / ES6)', stars: 4 },
+  { name: 'Spring', stars: 3 },
+  { name: 'Codeigniter', stars: 3 },
+];
+
+const skillSoftware = [
+  { name: 'Eclipse', stars: 5 },
+  { name: 'Vscode (ECMA 2015 / ES6)', stars: 5 },
+];
+
+const skillMarkupLanguages = [
+  { name: 'HTML / CSS', stars: 4 },
+  { name: 'Flexbox (ECMA 2015 / ES6)', stars: 3 },
+  { name: 'CSS Grid', stars: 3 },
+];
+
 const Skills = () => (
   <main>
     <section className="section-skills">
-      <div className="skills">
-        <h1>Programming Languages</h1>
-        <ul className="skill">
-          <li>
-            <div>Java</div>
-            <div>
-              <Stars checked={4} />
-            </div>
-          </li>
-          <li>
-            <div>Javascript (ECMA 2015 / ES6)</div>
-            <div>
-              <Stars checked={3} />
-            </div>
-          </li>
-          <li>
-            <div>PHP</div>
-            <div>
-              <Stars checked={3} />
-            </div>
-          </li>
-          <li>
-            <div>Bash</div>
-            <div>
-              <Stars checked={2} />
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div className="skills">
-        <h1>Frameworks</h1>
-        <ul className="skill">
-          <li>
-            <div>Bootstrap</div>
-            <div>
-              <Stars checked={5} />
-            </div>
-          </li>
-          <li>
-            <div>React JS</div>
-            <div>
-              <Stars checked={4} />
-            </div>
-          </li>
-          <li>
-            <div>Spring</div>
-            <div>
-              <Stars checked={3} />
-            </div>
-          </li>
-          <li>
-            <div>Codeigniter</div>
-            <div>
-              <Stars checked={3} />
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div className="skills">
-        <h1>Software</h1>
-        <ul className="skill">
-          <li>
-            <div>Eclipse</div>
-            <div>
-              <Stars checked={5} />
-            </div>
-          </li>
-          <li>
-            <div>Vscode</div>
-            <div>
-              <Stars checked={5} />
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div className="skills">
-        <h1>Markup Languages</h1>
-        <ul className="skill">
-          <li>
-            <div>HTML / CSS</div>
-            <div>
-              <Stars checked={5} />
-            </div>
-          </li>
-          <li>
-            <div>Flexbox</div>
-            <div>
-              <Stars checked={3} />
-            </div>
-          </li>
-          <li>
-            <div>CSS Grid</div>
-            <div>
-              <Stars checked={3} />
-            </div>
-          </li>
-        </ul>
-      </div>
+      <SkillDiv nameOfSkill="Programming languages" skill={skillProgrammingLanguages} />
+
+      <SkillDiv nameOfSkill="Frameworks" skill={skillFrameworks} />
+
+      <SkillDiv nameOfSkill="Software" skill={skillSoftware} />
+
+      <SkillDiv nameOfSkill="Markup Languages" skill={skillMarkupLanguages} />
     </section>
   </main>
 );

@@ -29,7 +29,6 @@ export default class Header extends React.Component {
             <i className="fas fa-bars fa-2x" />
           </button>
         </div>
-        console.log(window.innerWidth);
         <MediaQuery maxWidth={500}>{this.state.toogle && <NavLinks />}</MediaQuery>
         <MediaQuery minWidth={500}>
           <NavLinks />
