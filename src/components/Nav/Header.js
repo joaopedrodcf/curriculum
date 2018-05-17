@@ -1,9 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import NavLinks from './NavLinks';
-
-console.log(window.innerWidth);
 
 export default class Header extends React.Component {
   constructor(props) {
