@@ -58,6 +58,19 @@ html,
   display: unset;
 }
 
+article h1 {
+  font-size: 2.2em;
+}
+
+article h5 {
+  font-size: 1.3em;
+}
+
+article p {
+  font-size: 1.1em;
+  color: gray;
+}
+
 /*
 =============================================================================================================================================
 TRANSFORMS
@@ -248,19 +261,6 @@ MAIN SECTION
   animation: slideRight 0.6s forwards;
 }
 
-.section-about-me article h1 {
-  font-size: 2.2em;
-}
-
-.section-about-me article h5 {
-  font-size: 1.3em;
-}
-
-.section-about-me article p {
-  font-size: 1.1em;
-  color: gray;
-}
-
 .section-about-me figure {
   margin: auto 20px;
   grid-area: figure;
@@ -294,21 +294,21 @@ section-skills
   display: flex;
 }
 
-.section-skills .skills {
+.skills {
   margin-bottom: 30px;
   box-shadow: 1px 1px 10px 1px gray;
   background-color: #e8f1f2;
 }
 
-.section-skills .skills h1 {
+.skills h1 {
   margin: auto 0;
-  padding: 20px;
+  padding: 12px;
   background-color: #247ba0;
   box-shadow: 0 1px 5px 0 gray;
   text-align: center;
 }
 
-.section-skills .skills li {
+.skills li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -317,7 +317,7 @@ section-skills
   margin: 0 20px;
 }
 
-.section-skills .skill {
+.skill {
   padding: 0;
 }
 
@@ -365,6 +365,15 @@ PROJECTS
 
 .projects figure img {
   max-width: 100%;
+}
+
+.projects a {
+  margin-left: 5px;
+  display: inline-block;
+  transition: 0.3s;
+  font-weight: bold;
+  text-decoration: none;
+  color: #006494;
 }
 
 /*
@@ -483,6 +492,10 @@ HOVER ACTIONS
 =============================================================================================================================================
 */
 
+.projects a:hover {
+  transform: scale(1.2);
+}
+
 .footer-links a:hover {
   transform: scale(1.2);
 }
@@ -561,9 +574,18 @@ MEDIA QUERYS
     /* Correct the center */
   }
 
-  .nav-links {
+  .nav-links a {
+    display: none;
+  }
+
+  .responsive {
     display: flex;
     flex-direction: column;
+  }
+
+  .responsive a {
+    display: unset;
+    display: flex;
   }
 
   footer {
